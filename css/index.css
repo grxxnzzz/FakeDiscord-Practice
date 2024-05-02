@@ -1,0 +1,684 @@
+/* colors
+main sidebar: #1E1F23
+main menu: #323338
+friends: #2C2D31
+searchbars: #1E1F23
+btn-back: #2C2D31
+
+green: #287E41 
+*/
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #323338;
+  margin: 0;
+  padding: 0;
+}
+
+/* main-sidebar layout starts */
+
+.m-sidebar-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 5.333rem; /* 64 pt */
+  background-color: #1e1f23;
+  left: 0;
+  top: 0;
+  position: fixed;
+  gap: 1rem; /*12pt;*/
+  align-items: center;
+  padding-top: 2.667rem; /* 32pt */
+}
+
+.dot {
+    transition: 0.2s;
+    height: 60px;
+    width: 60px;
+    background-color: #2C2D31;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dot:hover {
+    transition: 0.2s;
+    background-color: #595B5E;
+    cursor: pointer;
+}
+
+.dot#dot-home {
+    display: flex;
+    align-items: center;
+    border-radius: 35%;
+    /* overflow: hidden; */
+}
+
+.dot#dot-home img {
+    margin: auto;
+    clip-path: inherit;
+}
+
+.separator {
+    height: 2px;
+    width: 55%;
+    background-color: #323338;
+    border-radius: 10px;
+}
+
+.m-sidebar-layout .dot:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.2s;
+}
+
+.m-sidebar-layout .dot#wc:nth-child(3):hover {
+    transition: 0.2s;
+    filter:brightness(2);
+}
+
+.m-sidebar-layout .dot#wc:nth-child(3) > img {
+    margin: auto;
+}
+
+.dot#dot-folder {
+    display: block;
+    border-radius: 35%;
+    display: flex;
+}
+
+.dot#dot-folder .dot-container {
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.dot#dot-small {
+    overflow: hidden;
+    margin: 3%;
+    height: 20px;
+    width: 20px;
+    background-color: whitesmoke;
+    background-position: center;
+    background-size: cover;
+}
+
+.dot#dot-small:nth-child(1) {
+    background-image: url("../img/groups/cyberpunk.png");
+}
+
+.dot#dot-small:nth-child(2) {
+    background-image: url("../img/groups/react.png");
+}
+
+.dot#dot-small:nth-child(3) {
+    background-image: url("../img/groups/nvidia.jpg");
+}
+
+.dot#dot-small:nth-child(4) {
+    background-image: url("../img/groups/steam.jpg");
+}
+
+.dot#dot-plus, .dot#dot-navigate {
+    display: block;
+    align-content: center;
+}
+
+.dot#dot-plus .dot-container {
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: #287E41;
+    font-size: 2.3rem;
+    align-content: center;
+
+}
+
+.dot#dot-navigate {
+    display: flex;
+    align-items: center;
+}
+
+.dot#dot-navigate img {
+    margin: auto;
+}
+
+/* main-sidebar layout ends */
+
+/* friends-sidebar layout starts */
+.f-sidebar-layout {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 16.25rem; /* 171pt */
+    background-color: #2C2D31;
+    top: 0;
+    left: 5.333rem; /* 64pt */
+}
+
+.search-layout {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6%;
+    width: 100%;
+    border-bottom: solid .1rem #1e1f2374;
+}
+
+.searchbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar input {
+    
+    /* border: 2px solid; */
+    border-radius: 4px;
+    color: whitesmoke;
+    background-color: #1E1F23;
+    padding: .5rem;
+    width: calc(100% - 3rem);
+}
+
+.searchbar input:enabled, .searchbar input:focus {
+    border: none;
+    outline: none;
+}
+
+.f-menu-layout {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* height: 24%; */
+}
+
+.f-menu-layout .menu-btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-btn {
+    transition: 0.2s;
+    border-radius: 8px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.menu-btn:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: #595B5E;
+}
+
+.menu-btn:hover .btn-txt {
+    transition: 0.2s;
+    color: white;
+}
+
+.btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-btn .btn-icon > img {
+    transition: 0.2s;
+}
+
+.menu-btn:hover .btn-icon > img {
+    transition: 0.2s;
+    filter: brightness(5);
+}
+
+.menu-btn:nth-child(2) {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.menu-btn .btn-txt {
+    color: #93989E;
+}
+
+.pms-layout {
+    display: flex;
+}
+
+.pms-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5%;
+    padding-bottom: 0;
+    color: #93989E;
+}
+
+.pms-container .pms-icon {
+    transition: 0.2s;
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+
+.pms-container .pms-text {
+    transition: 0.2s;
+    width: 90%;
+}
+
+.pms-container .pms-icon:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    color: white;
+    /* font-size: larger; */
+}
+
+.f-sidebar-layout .contacts-layout {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 5%;
+    height: fit-content;
+    height: auto;
+}
+
+.contacts-layout .contact {
+    transition: 0.2s;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .4rem;
+    border-radius: 8px;
+    gap: .5rem;
+}
+
+.contacts-layout .contact:hover {
+    transition: 0.2s;
+    background-color: #595B5E;
+    cursor: pointer;
+}
+
+.contacts-layout .contact .contact-name {
+    transition: 0.2s;
+    align-content: center;
+    color:#93989E;
+    height: 50%;
+    margin: auto;
+    width: 75%;
+    text-align: left;
+}
+
+.contact:hover .contact-name {
+    transition: 0.2s;
+    color: white;
+}
+
+.contact-avatar {
+    overflow: hidden;
+    padding: .4rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.contact-avatar > img,
+.cp-avatar > img {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.cp-avatar > img {
+    width: 2rem; 
+    height: 2rem;
+}
+
+.f-sidebar-layout .control_panel-layout {
+    display: flex;
+    max-width: 16.25rem;
+    width: 16.25rem;
+    position:fixed;
+    left: 5.333rem; /*64pt*/
+    bottom: 0;
+    background-color: #1C1D20;
+}
+
+.f-sidebar-layout .control_panel {
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content:flex-start;
+    width: 100%;
+}
+
+.control_panel .cp-name-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.control_panel .cp-name-container .cp-name {
+    color:whitesmoke;
+}
+
+.control_panel .cp-name-container .cp-status {
+    display: inline-block;
+    color:#93989E;
+    font-size: small;
+}
+
+.control_panel .cp-avatar {
+    margin: auto .5rem;
+}
+
+.control_panel .cp-avatar > img {
+    display: block;
+    margin: auto;
+    clip-path: circle(50%);
+}
+
+.cp-btn {
+    margin: auto;
+    border-radius: 2px;
+    padding: .075rem;
+    width: auto;
+}
+
+.cp-btn:hover {
+    transition: 0.2s;
+    background-color: #595b5e7d;
+}
+
+.control_panel .cp-btn > img {
+    display: block;
+    margin: auto;
+}
+
+.cp-btn-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.cp-btn-menu img {
+    display: block;
+    margin: auto;
+}
+
+.cp-btn-menu:hover img{
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* friends-sidebar layout ends */
+
+/* main-content layout starts */
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: calc(5.333rem + 16.25rem); /* 64pt + 171pt */
+    height: 6%;
+    width: 100%;
+    border-bottom: solid .1rem #1e1f2374;
+}
+
+.navbar .navbar-layout {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    height: 100%;
+    width: 70%;
+}
+
+.vertical_separator {
+    display: flex;
+    align-content: center;
+    height: 1.5rem;
+    /* height: 3rem; */
+    width: .05rem;
+    border-radius: 10px;
+    background-color: #93989e26;
+    margin: 0 .3rem;
+}
+
+.active-page-button {
+    color:#93989E;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: 0.2s;
+    padding: .1rem .3rem;
+}
+
+.active-page-button:hover {
+    transition: 0.2s;
+    color: whitesmoke;
+    background-color: #595B5E;
+}
+
+.active-page-button#actual-page-btn {
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    background-color: transparent;
+    transition: 0.2s;
+}
+
+.active-page-button#actual-page-btn:hover {
+    transition: 0.2s;
+    color: whitesmoke;
+    background-color: transparent;
+}
+
+.active-page-button#actual-page-btn > img {
+    display: flex;
+    align-self: center;
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.active-page-button#actual-page-btn > span {
+    display: flex;
+    align-self: center;
+}
+
+.active-page-button#add-friend-btn {
+    color: white;
+    padding: .1rem .3rem;
+    border-radius: 4px;
+    background-color: #287E41;
+    transition: 0.2s;
+}
+
+.active-page-button#add-friend-btn:hover {
+    /* transition: 0.2s; */
+    color: #3ab85e;
+    padding: .1rem .3rem;
+    border-radius: 4px;
+    background-color:transparent;
+}
+
+.navbar .navbar-optional-layout {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar-optional-layout img {
+    display: flex;
+    align-self: center;
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.navbar-optional-layout .optional-button {
+    transition: 0.2s;
+    color:#93989E;
+    cursor: pointer;
+    padding: .1rem .1rem;
+}
+
+.navbar-optional-layout .optional-button:hover {
+    transition: 0.2s;
+    filter: brightness(2);
+}
+
+.activity-section {
+    display: flex;
+    position: fixed;
+    top: 6%;
+    left: calc(5.333rem + 16.25rem); /* 64pt + 171pt */
+    width: 100%;
+    max-width: 98rem;
+    overflow: scroll;
+}
+
+.activity-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.activity-searchbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.activity-searchbar input {
+     border-radius: 4px;
+     color: whitesmoke;
+     background-color: #1E1F23;
+     padding: .5rem;
+     width: calc(100% - 3rem);
+}
+
+.activity-searchbar input:enabled, .searchbar input:focus {
+    border: none;
+    outline: none;
+}
+
+.online-counter {
+    color: #93989E;
+    text-transform: uppercase;
+    padding: .5rem 0;
+    border-bottom: solid .1rem #595b5e50;
+}
+
+.online-contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: solid .1rem #595b5e50;
+}
+
+.contact-base {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .65rem;
+    padding: .5rem 0;
+    margin: .5rem 0;
+    width: 100%;
+}
+
+.online-contact-avatar {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.online-contact-avatar img {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.online-contact-namespace {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+}
+
+.online-name {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.online-status {
+    color: #93989E;
+}
+
+.online-contact-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.contact-message-btn, .contact-options-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #2C2D32;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.contact-message-btn:hover, .contact-options-btn:hover {
+    background-color: #60626e76;
+}
+
+.contact-message-btn img, .contact-options-btn img {
+    width: 2rem;
+    height: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .navbar-optional-layout {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .navbar-optional-layout {
+        width: 40%;
+    }
+
+    .activity-section {
+        width: 100%;
+        max-width: 68rem;
+    }
+}
